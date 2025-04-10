@@ -6,7 +6,7 @@
 /*   By: mchafiki <mchafiki@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 17:04:49 by mchafiki          #+#    #+#             */
-/*   Updated: 2025/04/07 18:21:11 by mchafiki         ###   ########.fr       */
+/*   Updated: 2025/04/09 19:16:11 by mchafiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,19 +78,19 @@ int	is_valid_number(const char *str)
 	return (1);
 }
 
-void	validate_split_args(char **split_args, char *joined)
+void	validate_split_args(char **av, char *joined)
 {
-	int	i;
+	int	j;
 
-	i = 0;
-	while (split_args[i])
+	j = 0;
+	while (av[j])
 	{
-		if (!is_valid_number(split_args[i]))
+		if (!is_valid_number(av[j]) || !check_if_args_empty(av[j]))
 		{
 			free(joined);
-			ft_free(split_args);
+			ft_free(av);
 			print_error();
 		}
-		i++;
+		j++;
 	}
 }

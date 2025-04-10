@@ -6,7 +6,7 @@
 /*   By: mchafiki <mchafiki@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:33:26 by mchafiki          #+#    #+#             */
-/*   Updated: 2025/04/06 14:37:24 by mchafiki         ###   ########.fr       */
+/*   Updated: 2025/04/09 19:47:53 by mchafiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ void	ft_free(char **s)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
