@@ -2,10 +2,15 @@
 
 int	main(int ac, char **av)
 {
+	int		*array;
 	char	*joined;
 	char	**sp;
-	t_stack	*stack;
+	t_stack	*a;
+	t_stack	*b;
 
+	b = NULL;
+	array = 0;
+	joined = NULL;
 	if (ac < 2)
 		return (0);
 	check_args(av);
@@ -13,11 +18,13 @@ int	main(int ac, char **av)
 	sp = ft_split(joined, ' ');
 	validate_split_args(sp, joined);
 	free(joined);
-	stack = fill_stack(sp);
-	if (check_sort(stack))
-		error(&stack, sp);
+	a = fill_stack(sp);
+	if (check_sort(a))
+		error(&a, sp);
+	execute_algo(count(sp), &a, sort_array(array, count(sp), sp), &b);
 	ft_free(sp);
-	ft_lstclear(&stack);
+	ft_lstclear(&a);
+	ft_lstclear(&b);
 }
 
 void	error(t_stack **stack, char **str)

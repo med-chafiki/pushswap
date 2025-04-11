@@ -6,7 +6,7 @@
 /*   By: mchafiki <mchafiki@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:38:39 by mchafiki          #+#    #+#             */
-/*   Updated: 2025/04/10 14:12:25 by mchafiki         ###   ########.fr       */
+/*   Updated: 2025/04/11 02:54:04 by mchafiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,15 @@ void				pa(t_stack **a, t_stack **b);
 void				sa(t_stack **a);
 void				rra(t_stack **a);
 void				ra(t_stack **a);
+void				pb(t_stack **a, t_stack **b);
+void				sb(t_stack **b);
+void				rrb(t_stack **b);
+void				rb(t_stack **b);
+int					count(char **sp);
+int					*sort_array(int *array, int ac, char **s);
+int					*sort(int *arr, int size);
+void				execute_algo(int size, t_stack **stack_a, int *sorted,
+						t_stack **stack_b);
+void				algo_for2_elements(t_stack **a);
 
 #endif

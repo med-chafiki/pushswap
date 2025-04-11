@@ -6,7 +6,7 @@
 /*   By: mchafiki <mchafiki@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 17:31:41 by mchafiki          #+#    #+#             */
-/*   Updated: 2025/04/09 17:31:41 by mchafiki         ###   ########.fr       */
+/*   Updated: 2025/04/10 18:42:22 by mchafiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,16 @@ void	free_split(char **str)
 		j++;
 	}
 	free(str);
+}
+
+int	count(char **sp)
+{
+	int	count;
+
+	count = 0;
+	while (sp[count])
+	{
+		count++;
+	}
+	return (count);
 }
