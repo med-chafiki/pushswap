@@ -103,7 +103,7 @@ void	compare_and_pb(t_stack **a, int *arr_sorted, t_stack **b, int end)
 			pb(a, b);
 			if (*b && (*b)->next && (*b)->data < (*b)->next->data)
 				sb(b);
-            adjust_segment(&start, &end, size);
+			adjust_segment(&start, &end, size);
 		}
 		else if ((*a)->data > arr_sorted[end])
 			ra(a);

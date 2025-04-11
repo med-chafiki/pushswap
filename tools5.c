@@ -51,7 +51,7 @@ void	big_algo(t_stack **a, int *sorted_array, t_stack **b)
 		end = size / 6;
 	else
 		end = size / 14;
-    compare_and_pb(a, sorted_array, b, end);
+	compare_and_pb(a, sorted_array, b, end);
 	push_back_sorted(a, b);
 }
 
