@@ -6,7 +6,7 @@
 /*   By: mchafiki <mchafiki@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 02:59:48 by mchafiki          #+#    #+#             */
-/*   Updated: 2025/04/11 03:04:39 by mchafiki         ###   ########.fr       */
+/*   Updated: 2025/04/11 11:48:24 by mchafiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,7 @@ int	*sort(int *arr, int size)
 	return (arr);
 }
 
-void	execute_algo(int size, t_stack **a, int *ar,
-		t_stack **b)
+void	execute_algo(int size, t_stack **a, int *ar, t_stack **b)
 {
 	if (size == 1)
 	{
@@ -75,7 +74,7 @@ void	execute_algo(int size, t_stack **a, int *ar,
 	else if (size == 5)
 		algo_for5_elements(a, b);
 	else
-		algo(a, ar, b);
+		big_algo(a, ar, b);
 	free(ar);
 }
 
@@ -83,8 +82,21 @@ void	algo_for2_elements(t_stack **a)
 {
 	if (!*a || !(*a)->next)
 		return ;
-	if ((*a)->next == NULL)
+	if ((*a)->data > (*a)->next->data)
+		sa(a);
+}
+
+void	algo_for3_elements(t_stack **a)
+{
+	int	index;
+
+	if (!*a || !(*a)->next)
 		return ;
+	index = get_max(a);
+	if (index == 0)
+		ra(a);
+	else if (index == 1)
+		rra(a);
 	if ((*a)->data > (*a)->next->data)
 		sa(a);
 }

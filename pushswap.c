@@ -26,10 +26,3 @@ int	main(int ac, char **av)
 	ft_lstclear(&a);
 	ft_lstclear(&b);
 }
-
-void	error(t_stack **stack, char **str)
-{
-	ft_lstclear(stack);
-	free_split(str);
-	exit(0);
-}

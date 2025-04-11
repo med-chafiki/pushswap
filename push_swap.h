@@ -6,7 +6,7 @@
 /*   By: mchafiki <mchafiki@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:38:39 by mchafiki          #+#    #+#             */
-/*   Updated: 2025/04/11 02:54:04 by mchafiki         ###   ########.fr       */
+/*   Updated: 2025/04/11 12:10:15 by mchafiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,14 @@ int					*sort(int *arr, int size);
 void				execute_algo(int size, t_stack **stack_a, int *sorted,
 						t_stack **stack_b);
 void				algo_for2_elements(t_stack **a);
-
+void				algo_for3_elements(t_stack **a);
+int					get_max(t_stack **stack);
+void				algo_for4_elements(t_stack **a, t_stack **b);
+int					get_min(t_stack **stack);
+void				algo_for5_elements(t_stack **a, t_stack **b);
+void				big_algo(t_stack **a, int *sorted_array, t_stack **b);
+void				adjust_segment(int *start, int *end, int size);
+void				push_back_sorted(t_stack **a, t_stack **b);
+void				compare_and_pb(t_stack **a, int *arr_sorted, t_stack **b,
+						int end);
 #endif
